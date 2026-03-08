@@ -1,5 +1,10 @@
 import { CA } from 'country-flag-icons/react/3x2'
 import {CiUser, CiHeart, CiShoppingCart, CiSearch} from 'react-icons/ci'
+import Link from "next/link"
+import Image from "next/image"
+import promoSaleImage from "../../../../public/assets/blackSale.jpg"
+
+
 function NavBar() {
 
     const navLinks = [
@@ -60,8 +65,29 @@ function NavBar() {
                     </div>
                 </div>
             </nav>
+            <PromoSales />
         </header>
     )
 }
 
 export default NavBar
+
+function PromoSales (){
+    return (
+        <div className='grid grid-cols-1 md:grid-cols-2 items-center gap-9'>
+            <div className="bg-[#F1F1F1] text-center font-fashion py-[28px] px-[154px]">
+                <div className="flex flex-col gap-1">
+                <h2 className='font-semibold text-3xl leading-[120%] tracking-[1px]'>Spring/Summer 2024</h2>
+                <p className='text-[16px] font-light leading-[100%] tracking-tight font-news'>Discover the season&apos;s most coveted collections</p>
+                <Link href={"/"} className="font-news text-xl underline font-medium">Shop New Arrivals</Link>
+                </div>
+            </div>
+            <div>
+                <Image
+                 className='w-full md:mx-w-[638px] max-h-[140px]'
+                 src={promoSaleImage}
+                 alt='black friday banner' />
+            </div>
+        </div>
+    )
+}

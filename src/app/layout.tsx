@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter,Playfair_Display, Lato } from "next/font/google";
+import { Geist, Geist_Mono, Inter,Playfair_Display, Lato, Newsreader } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -22,6 +22,11 @@ const inter = Inter({
   variable: "--font-nav",
 })
 
+const newsReader = Newsreader({
+  subsets: ["latin"],
+  variable: "--font-news"
+})
+
 // const lato = Lato ({
 //   subsets: ["latin-next"]
 // })
@@ -38,7 +43,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${playfair.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${playfair.variable} ${newsReader.variable} antialiased`}
       >
         {children}
       </body>

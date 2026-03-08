@@ -124,6 +124,10 @@
   font-family: var(--font-fashion);
 }
 
+.font-news{
+  font-family: var(--font-news)
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
