@@ -2,7 +2,6 @@ import { FaInstagram, FaFacebook, FaTwitter, FaPinterest } from "react-icons/fa"
 import { CA } from 'country-flag-icons/react/3x2'
 
 function Footer() {
-
     const footerLinks = [
         {header: "Fashion", sub: ["Your destination for authentic luxury fashion from the world's most prestigious designers."], Icon: CA, break: true},
         {header:"Shop", sub: ["New Arrivals", "Men", "Women", "Sale", "Gift Cards"], break:false},
