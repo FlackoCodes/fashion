@@ -84,7 +84,7 @@ function PromoSales (){
             </div>
             <div>
                 <Image
-                 className='w-full md:mx-w-[638px] max-h-[140px] object-cover'
+                 className='w-full md:mx-w-[688px] max-h-[155px] object-cover'
                  src={promoSaleImage}
                  alt='black friday banner' />
             </div>
