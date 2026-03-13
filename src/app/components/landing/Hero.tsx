@@ -6,7 +6,7 @@ import Image from "next/image"
 function Hero() {
     return (
         <>
-      <section
+  <section
   className="w-full bg-gray-900 bg-linear-to-r from-gray-900 to-gray-500"
 //   style={{ backgroundImage: `url(${heroImage.src})` }}
 >
