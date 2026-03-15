@@ -2,7 +2,9 @@ import Image from "next/image"
 import {StaticImageData} from "next/image"
 import handBag from "../../../../public/assets/handBag.jpg"
 import watch from "../../../../public/assets/watch.jpg"
+import fashionBg from "../../../../public/assets/fashionWeek.jpg"
 import { Heart } from "lucide-react"
+import Link from "next/link"
 
 
 type trendingData = {
@@ -10,7 +12,7 @@ type trendingData = {
     name: string;
     description: string;
     price: number;
-    discoubtedPrice?: number;            
+    discountedPrice?: number;            
 }
 
 const trendingData: trendingData[] = [
@@ -31,7 +33,7 @@ const trendingData: trendingData[] = [
         name: "CARTIER",
         description: "Tank Must Watch",
         price: 2800,
-        discoubtedPrice:  3500
+        discountedPrice:  3500
     },
      {
         image: watch,
@@ -45,6 +47,7 @@ function Main() {
     return (
         <main className="max-w-7xl mx-auto">
             <Trending />
+            <Fashweek />
         </main>
     )
 }
@@ -67,24 +70,50 @@ function Trending() {
                                 <Heart  className="w-10 h-10 p-2 text-[#E5E7EB] bg-white z-10 rounded-full"/>
                             </div>
                             <div>
-                                {item.discoubtedPrice && (
-                                    <span className="absolute font-nav text-[12px] font-medium text-[18px] py-2  leading-[16.7px] tracking-tighter text-white top-1 left-1 text-lg">Sale</span>)
+                                {item.discountedPrice && (
+                                    <span className="absolute font-nav font-medium text-[18px] py-2  leading-[16.7px] tracking-tighter text-white top-1 left-1 text-lg">Sale</span>)
                                 }
                             </div>
                         </div>
                         <h3 className="leading-[16px] tracking-tight font-nav font-normal">{item.name}</h3>
-                        <p className="text-sm text-gray-600">{item.description}</p>
+                        <p className="text-[14px] leading-5 tracking-tighter font-medium font-nav">{item.description}</p>
                         <div className="flex items-center gap-4">
-                            <p className="text-lg font-bold">${item.price}</p>
+                            <p className="text-lg  tracking-tighter leading-7 font-semibold font-nav text-[#000000]">${item.price}</p>
                             {
-                                item.discoubtedPrice && (
-                                    <p className="line-through text-lg font-bold">${item.discoubtedPrice}</p>
+                                item.discountedPrice && (
+                                    <p className="line-through text-[15px] text-[#9CA3AF] tracking-tighter leading-7 font-semibold font-nav">${item.discountedPrice}</p>
                                 )
                             }
                         </div>
                     </div>
                 ))
                }
+            </div>
+        </section>
+    )
+}
+
+
+function Fashweek(){
+    return (
+        <section className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-[68%_32%] gap-4 md:gap-8 my-6 md:my-12">
+                <div className="bg-[#E5E7EB]" style={{backgroundImage: `url(${fashionBg.src})`, backgroundSize: "cover", backgroundPosition: "center", width: "791px", height:"331px", backgroundColor: "#E5E7EB"}}>
+                    <h2 className="text-[#FFFFFF] w-auto md:w-[125px] font-fashion text-3xl md:text-5xl leading-8 tracking-wider p-12 text-center md:text-left">Fashion Week with Balenciaga</h2>
+                </div>
+                <div className="flex flex-col items-center justify-center gap-4 text-center">
+                <p className="text-lg text-start w-full md:w-[417px] md:text-[24px] text-[#141413] font-normal font-lato leading-[120%] tracking-tighter">
+                    Discover the latest runway looks and <br className="hidden md:block"/> exclusive pieces from Paris Fashion Week
+                </p>
+                <div className="w-full text-start"> 
+                    <Link
+                    href=""
+                    className="text-white text-start bg-[#E31837] font-lato py-2 px-6"
+                >
+                    Explore Collection
+                </Link></div>
+               
+                </div>
             </div>
         </section>
     )
