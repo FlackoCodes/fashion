@@ -74,20 +74,35 @@ export default NavBar
 
 function PromoSales (){
     return (
-        <div className='grid grid-cols-1 md:grid-cols-2 items-center gap-5 md:gap-9'>
-            <div className="bg-[#F1F1F1] text-center font-fashion md:py-[28px] md:px-[154px] py-4 px-8">
-                <div className="flex flex-col gap-1">
-                <h2 className='font-semibold text-lg md:text-3xl leading-[120%] tracking-[1px]'>Spring/Summer 2024</h2>
-                <p className='md:text-[16px] text-[12px] font-light leading-[100%] tracking-tight font-news py-1.5'>Discover the season&apos;s most coveted collections</p>
-                <Link href={"/"} className="font-news text-lg md:text-xl underline font-medium">Shop New Arrivals</Link>
-                </div>
-            </div>
-            <div>
-                <Image
-                 className='w-full md:mx-w-[688px] max-h-[155px] object-cover'
-                 src={promoSaleImage}
-                 alt='black friday banner' />
-            </div>
-        </div>
+       <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-5 md:gap-9">
+  
+  <div className="bg-[#F1F1F1] text-center font-fashion py-6 px-6 md:px-10 lg:px-[154px]">
+    <div className="flex flex-col gap-2">
+      <h2 className="font-semibold text-lg md:text-2xl lg:text-3xl leading-[120%] tracking-[1px]">
+        Spring/Summer 2024
+      </h2>
+
+      <p className="text-[12px] md:text-[14px] lg:text-[16px] font-light leading-[100%] tracking-tight font-news py-1.5">
+        Discover the season&apos;s most coveted collections
+      </p>
+
+      <Link
+        href="/"
+        className="font-news text-base md:text-lg lg:text-xl underline font-medium"
+      >
+        Shop New Arrivals
+      </Link>
+    </div>
+  </div>
+
+  <div>
+    <Image
+      className="w-full max-h-[155px] md:max-h-[220px] lg:max-h-[260px] object-cover"
+      src={promoSaleImage}
+      alt="black friday banner"
+    />
+  </div>
+
+</div>
     )
 }

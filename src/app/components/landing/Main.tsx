@@ -55,7 +55,7 @@ export default Main
 
 function Trending() {
     return (
-        <section className="max-w-7xl my-4 md:my-8">
+        <section className="max-w-7xl my-4 md:my-8 p-4 md:p-0">
             <header className="flex justify-between items-center">
                 <h2 className="text-3xl text-[#000000] font-bold leading-[42px] font-fashion tracking-tight">Trending Now</h2>
                 <p className="text-[#000000] leading-[42px] font-nav border-b-2  text-[14px] font-medium border-b-black tracking-tighter">View All</p>
@@ -96,13 +96,13 @@ function Trending() {
 
 function Fashweek(){
     return (
-        <section className="max-w-7xl mx-auto">
+        <section className="max-w-7xl mx-auto p-4 md:p-0">
             <div className="grid grid-cols-1 md:grid-cols-[68%_32%] gap-4 md:gap-8 my-6 md:my-12">
-                <div className="bg-[#E5E7EB]" style={{backgroundImage: `url(${fashionBg.src})`, backgroundSize: "cover", backgroundPosition: "center", width: "791px", height:"331px", backgroundColor: "#E5E7EB"}}>
-                    <h2 className="text-[#FFFFFF] w-auto md:w-[125px] font-fashion text-3xl md:text-5xl leading-8 tracking-wider p-12 text-center md:text-left">Fashion Week with Balenciaga</h2>
+            <div className="bg-[#E5E7EB] w-[300px] overflow-hidden h-[229px] md:max-w-[791px] md:max-h-[360px] bg-cover bg-center" style={{ backgroundImage: `url(${fashionBg.src})` }}>
+                    <h2 className="text-[#FFFFFF] w-full md:w-[125px] font-bold font-fashion text-3xl sm:text-center! md:text-5xl leading-8 tracking-wider p-12 text-center md:text-left">Fashion Week with Balenciaga</h2>
                 </div>
                 <div className="flex flex-col items-center justify-center gap-4 text-center">
-                <p className="text-lg text-start w-full md:w-[417px] md:text-[24px] text-[#141413] font-normal font-lato leading-[120%] tracking-tighter">
+                <p className="text-lg text-start w-full md:w-[417px] md:text-[24px]  text-[#141413] font-normal font-lato leading-[120%] tracking-tighter">
                     Discover the latest runway looks and <br className="hidden md:block"/> exclusive pieces from Paris Fashion Week
                 </p>
                 <div className="w-full text-start"> 
