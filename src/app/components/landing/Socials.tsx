@@ -15,14 +15,16 @@ import Image from "next/image"
 
 function Socials() {
     return (
+        <>
         <section className="max-w-7xl mx-auto">
             <header className="text-center">
                 <h2 className="text-[36px] my-4 leading-8 tracking-tighter font-fashion font-bold">Follow @Luxora</h2>
                 <p className="text-[#4B5563] font-nav text-[16px] leading-[24px] font-medium tracking-tighter">Join our community of style enthusiasts</p>
             </header>
             <SocialsSlider />
-            <GetInTouch />
         </section>
+         <GetInTouch />
+        </>
     )
 }
 
@@ -77,7 +79,7 @@ function SocialsSlider() {
 
 function GetInTouch(){
     return(
-        <section className="bg-[#F9FAFB]">
+        <section className="bg-[#F9FAFB] w-full">
             <div className="max-w-7xl mx-auto text-center py-16">
                 <h2 className="text-xl md:text-[36px] text-[#000000] my-4 leading-8 tracking-tighter font-fashion font-bold mb-4">Join Our Exclusive Circle</h2>
                 <p className="text-[#4B5563] font-nav text-[12px] md:text-[16px] leading-[24px] font-medium tracking-tighter">Be the first to know about new arrivals, special offers, and style inspiration</p>
