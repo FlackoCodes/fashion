@@ -212,7 +212,7 @@ return(
             {
                 uniFashionData.map((item, index) => (
                     <div key={index} className="relative w-full md:min-w-[350px] md:max-w-[600px] md:max-h-[400px] mx-auto h-full overflow-hidden">
-                        <Image src={item.image} alt={item.name} className="w-full h-full object-cover" />
+                        <Image src={item.image} alt={item.name} className="w-full max-h-[430px] md:h-full object-cover" />
                         <div className="absolute inset-0 bg-black/40"></div>
                         <div className="absolute bottom-2 left-2 p-1.5 text-white flex flex-col gap-1.5 z-10">
                             <span className="text-lg text-white leading-[20px] traking-wider  font-medium font-nav">{item.cat}</span>
