@@ -1,13 +1,22 @@
+"use client"
+
+import * as React from "react"
+import Autoplay from "embla-carousel-autoplay"
+
+
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "../../components/ui/carousel"
+
 import { CA } from 'country-flag-icons/react/3x2'
 import {CiUser, CiHeart, CiShoppingCart, CiSearch} from 'react-icons/ci'
 import Link from "next/link"
 import Image from "next/image"
 import promoSaleImage from "../../../../public/assets/blackSale.jpg"
 
-
-function NavBar() {
-
-    const navLinks = [
+const navLinks = [
         {name: "Sale Up to 70%", href: "/women", promo: true},
         {name: "New Arrivals", href: "/men", promo: false},
         {name: "Designer Brands", href: "/kids", promo: false},
@@ -18,9 +27,10 @@ function NavBar() {
         {name: "Watches", href: "/beauty", promo: false},
         {name: "Accessories", href: "/beauty", promo: false},
     ]
+function NavBar() {
 
     return(
-        <header className="w-full max-w-7xl mx-auto py-3">
+        <header className="w-full max-w-7xl mx-auto p-1.5">
             <nav className="flex flex-col justify-between">
                 <div className="flex items-center justify-between">
                     <div>
@@ -105,4 +115,38 @@ function PromoSales (){
 
 </div>
     )
+}
+
+function NavSlider(){
+  return (
+    
+function SocialsSlider() {
+  const autoplay = React.useRef(
+    Autoplay({ delay: 2500, stopOnInteraction: false })
+  ).current
+
+  return (
+  <section className="w-full max-w-7xl mx-auto bg-white px-6 md:px-10 py-16">
+  <Carousel
+    plugins={[autoplay]}
+    opts={{ align: "start", loop: true }}
+    className="w-full"
+  >
+    <CarouselContent className="-ml-4">
+      {navLinks.map((navLinkItem, index) => (
+        <CarouselItem
+          key={index}
+          className="pl-4 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5"
+        >
+          <div className="h-[190px] w-[200px] flex items-center justify-center">
+           <span className="text-sm tracking-tighter font-inter leading-[17px] font-nav font-medium">{navLinkItem.name}</span>
+          </div>
+        </CarouselItem>
+      ))}
+    </CarouselContent>
+  </Carousel>
+</section>
+  )
+}
+  )
 }
