@@ -21,10 +21,10 @@ function Footer() {
             {footerLinks.map((link)=>
             <div key={link.header} className="flex flex-col">
                 <h1 className="font-fashion text-xl md:text-2xl font-bold my-2 text-[#FFFFFF]"> {link.header}</h1>
-               <div className={`flex flex-col gap-2 ${link.icons ? 'flex-row' : ''}`}>
+               <div className={`flex flex-col gap-3 md:gap-4 ${link.icons ? 'flex-row' : ''}`}>
                 {link.sub.map((sub, index) => {
                   if (typeof sub === "string") {
-                        return  <span key={index} className={`text-[#9CA3AF] text-sm md:text-base font-nav ${link.break ? 'max-w-[247px]' : ''}`}>{sub}</span>
+                        return  <span key={index} className={`text-[#9CA3AF] text-sm md:text-sm font-nav leading-tight ${link.break ? 'max-w-[247px]' : ''}`}>{sub}</span>
                     }
 
                 const Icon = sub.Icon;

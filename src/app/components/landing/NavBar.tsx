@@ -74,9 +74,9 @@ export default NavBar
 
 function PromoSales (){
     return (
-       <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-5 md:gap-9">
+       <div className="grid grid-cols-1 md:grid-cols-2 items-stretch gap-5 md:gap-9">
   
-  <div className="bg-[#F1F1F1] text-center font-fashion py-6 px-6 md:px-10 lg:px-[154px]">
+  <div className="bg-[#F1F1F1] text-center font-fashion flex flex-col justify-center py-6 px-6 md:px-10 lg:px-[154px] min-h-[155px] md:min-h-[220px]">
     <div className="flex flex-col gap-2">
       <h2 className="font-semibold text-lg md:text-2xl lg:text-3xl leading-[120%] tracking-[1px]">
         Spring/Summer 2024
@@ -95,9 +95,9 @@ function PromoSales (){
     </div>
   </div>
 
-  <div>
+  <div className="h-full">
     <Image
-      className="w-full max-h-[155px] md:max-h-[220px] lg:max-h-[260px] object-cover"
+      className="w-full h-full object-cover min-h-[155px] md:min-h-[220px]"
       src={promoSaleImage}
       alt="black friday banner"
     />
