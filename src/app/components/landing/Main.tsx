@@ -6,6 +6,8 @@ import fashionBg from "../../../../public/assets/fashionWeek.jpg"
 import balenciaga from "../../../../public/assets/brand1.png"
 import ralphLauren from "../../../../public/assets/brand2.png"
 import dior from "../../../../public/assets/brand3.png"
+import mensFashionn from "../../../../public/assets/mens.jpg"
+import womensFashion from "../../../../public/assets/womens.jpg"
 import { Heart } from "lucide-react"
 import Link from "next/link"
 
@@ -70,6 +72,30 @@ const featuredBrands: brandsData[] = [
     }
 ]
 
+type uniFashion = {
+    image: StaticImageData,
+    cat: string,
+    name: string,
+    description: string,
+    link: string
+}
+
+const uniFashionData: uniFashion[] = [
+    {
+        image: mensFashionn,
+        cat: "MEN'S COLLECTION",
+        name: "Tailored Perfection",
+        description: "Discover impeccably crafted suits and formalwear",
+        link: "Shop Men's"
+    },
+    {
+        image: womensFashion,
+        cat: "WOMEN'S COLLECTION",
+        name: "Effortless Elegance",
+        description: "Timeless pieces for the modern woman",
+        link: "Shop Women's"
+    }
+]
 
 function Main() {
     return (
@@ -77,6 +103,9 @@ function Main() {
             <Trending />
             <Fashweek />
             <Brands />
+            <Trending />
+            <Trending />
+            <UniFashion />
         </main>
     )
 }
@@ -127,8 +156,9 @@ function Fashweek(){
     return (
         <section className="max-w-7xl mx-auto p-4 md:p-0">
             <div className="grid grid-cols-1 lg:grid-cols-[68%_32%] gap-6 md:gap-8 my-6 md:my-12">
-                <div className="bg-[#E5E7EB] w-full overflow-hidden h-[300px] md:h-[400px] lg:h-[360px] bg-cover bg-center" style={{ backgroundImage: `url(${fashionBg.src})` }}>
-                    <div className="h-full w-full flex items-center p-8 md:p-12">
+                <div className="relative bg-[#E5E7EB] w-full overflow-hidden h-[300px] md:h-[400px] lg:h-[360px] bg-cover bg-center" style={{ backgroundImage: `url(${fashionBg.src})` }}>
+                    <div className="absolute inset-0 bg-black/40"></div>
+                    <div className="relative h-full w-full flex items-center p-8 md:p-12 z-10">
                         <h2 className="text-[#FFFFFF] md:max-w-[300px] font-bold font-fashion text-3xl md:text-4xl lg:text-5xl leading-tight tracking-wider text-center md:text-left mx-auto md:mx-0">Fashion Week with Balenciaga</h2>
                     </div>
                 </div>
@@ -171,6 +201,29 @@ function Brands() {
                 }
             </div>
         </div>
-         </section>
+    </section>
     )
+}
+
+function UniFashion (){
+return(
+    <section className="bg-[#E5E7EB] py-12 my-12">
+        <div className="max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-6 mx-auto  my-4 md:my-8">
+            {
+                uniFashionData.map((item, index) => (
+                    <div key={index} className="relative w-full md:min-w-[350px] md:max-w-[600px] md:max-h-[400px] mx-auto h-full overflow-hidden">
+                        <Image src={item.image} alt={item.name} className="w-full h-full object-cover" />
+                        <div className="absolute inset-0 bg-black/40"></div>
+                        <div className="absolute bottom-2 left-2 p-1.5 text-white flex flex-col gap-1.5 z-10">
+                            <span className="text-lg text-white leading-[20px] traking-wider  font-medium font-nav">{item.cat}</span>
+                            <h3 className="text-lg md:text-3xl text-white  font-bold font-fashion">{item.name}</h3>
+                            <p className="text-lg md:text-xl text-white  font-medium font-nav leading-[20px] traking-wider">{item.description}</p>
+                            <Link href="" className="text-lg md:text-xl text-white font-bold font-nav leading-[20px] traking-wider border-b-2 mb-2 border-b-white w-fit">{item.link}</Link>
+                        </div>
+                    </div>
+                ))
+            }
+        </div>
+    </section>
+)
 }
