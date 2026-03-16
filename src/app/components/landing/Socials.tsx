@@ -30,8 +30,6 @@ function Socials() {
 
 export default Socials
 
-
-
 const brands = [
   { name: "Brand 1", image: socialsOne },
   { name: "Brand 2", image: socialsTwo },

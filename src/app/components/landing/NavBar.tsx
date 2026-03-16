@@ -3,7 +3,6 @@
 import * as React from "react"
 import Autoplay from "embla-carousel-autoplay"
 
-
 import {
   Carousel,
   CarouselContent,
@@ -33,7 +32,7 @@ function NavBar() {
         <header className="w-full max-w-7xl mx-auto p-1.5">
             <nav className="flex flex-col justify-between">
                 <div className="flex items-center justify-between">
-                    <div>
+                    <div className="hidden md:block">
                         <ul className="flex items-center gap-12 font-nav">
                             <li>Women</li>
                             <li>Men</li>
@@ -41,7 +40,7 @@ function NavBar() {
                             <li>Beauty</li>
                         </ul>
                     </div>
-                    <div>
+                    <div className="hidden md:block">
                       <h1 className="font-fashion tracking-[2.5px] font-bold leading-[36px] text-[30px]">FASHION</h1>
                     </div>
                     <div>
