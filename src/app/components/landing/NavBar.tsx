@@ -116,10 +116,7 @@ function PromoSales (){
     )
 }
 
-function NavSlider(){
-  return (
-    
-function SocialsSlider() {
+function NavSlider() {
   const autoplay = React.useRef(
     Autoplay({ delay: 2500, stopOnInteraction: false })
   ).current
@@ -145,7 +142,5 @@ function SocialsSlider() {
     </CarouselContent>
   </Carousel>
 </section>
-  )
-}
   )
 }
