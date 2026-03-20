@@ -29,7 +29,7 @@ const navLinks = [
 function NavBar() {
 
     return(
-        <header className="w-full max-w-7xl mx-auto p-1.5">
+        <header className="w-full max-w-7xl mx-auto p-1.5 py-4">
             <nav className="flex flex-col justify-between">
                 <div className="flex items-center justify-between">
                     <div className="hidden md:block">
