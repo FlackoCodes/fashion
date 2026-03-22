@@ -62,7 +62,7 @@ function NavBar() {
         <div className='border-t border-gray-200 mt-8 py-6 flex justify-between items-center'>
           <ul className="flex items-center gap-12">
             {navLinks.map((link, index) => (
-              <li className={`text-sm tracking-tighter font-inter leading-[17px] font-nav font-medium ${link.promo ? 'text-[#DC2626]' : 'text-[#374151]'}`} key={index}>{link.name}</li>
+              <li className={`text-sm tracking-tighter font-inter leading-4.25 font-nav font-medium ${link.promo ? 'text-[#DC2626]' : 'text-[#374151]'}`} key={index}>{link.name}</li>
             ))}
           </ul>
           <div className='relative'>
