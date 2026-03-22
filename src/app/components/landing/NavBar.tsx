@@ -8,13 +8,13 @@ import {
   CarouselContent,
   CarouselItem,
 } from "../../components/ui/carousel"
-
+import { Menu } from 'lucide-react';
 import { CA } from 'country-flag-icons/react/3x2'
 import { CiUser, CiHeart, CiShoppingCart, CiSearch } from 'react-icons/ci'
 import Link from "next/link"
 import Image from "next/image"
 import promoSaleImage from "../../../../public/assets/blackSale.jpg"
-import { FaHamburger } from "react-icons/fa"
+
 
 const navLinks = [
   { name: "Sale Up to 70%", href: "/women", promo: true },
@@ -33,7 +33,7 @@ function NavBar() {
     <header className="w-full max-w-7xl mx-auto p-1.5 py-4">
       <nav className="flex flex-col justify-between">
         <div className="flex items-center justify-between">
-          <div className="block md:hidden"><FaHamburger className="size-6" /></div>
+          <div className="block md:hidden"><Menu className="size-6" /></div>
           <div className="hidden md:block">
             <ul className="flex items-center gap-12 font-nav">
               <li>Women</li>
