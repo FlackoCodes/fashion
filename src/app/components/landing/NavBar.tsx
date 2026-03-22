@@ -59,7 +59,7 @@ function NavBar() {
             </ul>
           </div>
         </div>
-        <div className='border-t border-gray-200 mt-8 py-6 flex justify-between items-center'>
+        <div className='hidden lg:block border-t border-gray-200 mt-8 py-6 flex justify-between items-center'>
           <ul className="flex items-center gap-12">
             {navLinks.map((link, index) => (
               <li className={`text-sm tracking-tighter font-inter leading-4.25 font-nav font-medium ${link.promo ? 'text-[#DC2626]' : 'text-[#374151]'}`} key={index}>{link.name}</li>
@@ -76,10 +76,9 @@ function NavBar() {
           </div>
         </div>
       </nav>
-      <div className="hidden lg:block">
+      <div className="my-4">
         <PromoSales />
       </div>
-
     </header>
   )
 }
@@ -111,7 +110,7 @@ function PromoSales() {
 
       <div className="h-full">
         <Image
-          className="w-full h-full object-cover min-h-[155px] md:min-h-[220px]"
+          className="w-full h-full object-cover min-h-38.75 md:min-h-55"
           src={promoSaleImage}
           alt="black friday banner"
         />
@@ -139,8 +138,8 @@ function NavSlider() {
               key={index}
               className="pl-4 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5"
             >
-              <div className="h-[190px] w-[200px] flex items-center justify-center">
-                <span className="text-sm tracking-tighter font-inter leading-[17px] font-nav font-medium">{navLinkItem.name}</span>
+              <div className="h-47.5 w-50 flex items-center justify-center">
+                <span className="text-sm tracking-tighter font-inter leading-4.5 font-nav font-medium">{navLinkItem.name}</span>
               </div>
             </CarouselItem>
           ))}
