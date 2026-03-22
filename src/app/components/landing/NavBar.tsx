@@ -76,7 +76,10 @@ function NavBar() {
           </div>
         </div>
       </nav>
-      <PromoSales />
+      <div className="hidden lg:block">
+        <PromoSales />
+      </div>
+
     </header>
   )
 }
